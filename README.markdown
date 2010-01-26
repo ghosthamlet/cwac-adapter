@@ -30,8 +30,8 @@ None at present.
 
 Version
 -------
-This is version 0.1 of this module, meaning it is pretty darn
-new.
+This is version 0.2 of this module, meaning it is pretty darn
+new, but getting more exercise.
 
 Demo
 ----
