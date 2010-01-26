@@ -15,6 +15,7 @@
 
 package com.commonsware.cwac.adapter;
 
+import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -34,6 +35,16 @@ public class AdapterWrapper extends BaseAdapter {
 		super();
 		
 		this.wrapped=wrapped;
+		
+		wrapped.registerDataSetObserver(new DataSetObserver() {
+			public void onChanged() {
+				notifyDataSetChanged();
+			}
+			
+			public void onInvalidated() {
+				notifyDataSetInvalidated();
+			}
+		});
 	}
 
 	/**
