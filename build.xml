@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="AdapterWrapper" default="help">
-
     <!-- The local.properties file is created and updated by the 'android' tool.
          It contains the path to the SDK. It should *NOT* be checked in in Version
          Control Systems. -->
@@ -64,11 +63,10 @@
     -->
     <setup />
     
-    <target name="jar" depends="debug">
+    <target name="jar" depends="compile">
         <jar
             destfile="bin/CWAC-AdapterWrapper.jar"
             basedir="bin/classes"
-            excludes="com/commonsware/cwac/bus/demo/**"
         />
     </target>
     
@@ -80,5 +78,25 @@
             <fileset dir="gen" includes="**/*"/>
         </delete>
     </target>
+    
+    <target name="parcel" depends="jar">
+        <exec executable="parcel">
+            <arg value="package" />
+            <arg value="parcel.json" />
+            <arg value="--dir" />
+            <arg value="parcel" />
+            <arg value="-j" />
+            <arg value="bin/CWAC-AdapterWrapper.jar" />
+            <arg value="-d" />
+            <arg value="README.markdown" />
+            <arg value="LICENSE" />
+        </exec>
+    </target>
 
+    <target name="lint">
+        <exec executable="parcel">
+            <arg value="lint" />
+            <arg value="parcel.json" />
+        </exec>
+    </target>
 </project>

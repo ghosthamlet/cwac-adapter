@@ -19,10 +19,15 @@ By itself, it is not terribly interesting. However, other CWAC
 projects, like [`EndlessAdapter`][endless] and
 [`ThumbnailAdapter`][thumbnail], take advantage of it.
 
+This is available from [the Android Parcel Project](http://andparcel.com) as the
+`cwac-adapter` parcel.
+
 Usage
 -----
-Full instructions for using this module are forthcoming. Stay
-tuned!
+Just extend AdapterWrapper and override whatever adapter-related
+methods you wish. By default, all adapter methods delegate to the
+wrapped adapter. Your code can get at the wrapped adapter by
+calling `getWrappedAdapter()`.
 
 Dependencies
 ------------
@@ -30,8 +35,8 @@ None at present.
 
 Version
 -------
-This is version 0.2 of this module, meaning it is pretty darn
-new, but getting more exercise.
+This is version 0.3 of this module, meaning it is slowly climbing
+towards respectability.
 
 Demo
 ----
@@ -51,6 +56,10 @@ Questions
 If you have questions regarding the use of this code, please
 join and ask them on the [cw-android Google Group][gg]. Be sure to
 indicate which CWAC module you have questions about.
+
+Who Made This?
+--------------
+<a href="http://commonsware.com">![CommonsWare](http://commonsware.com/images/logo.png)</a>
 
 [gg]: http://groups.google.com/group/cw-android
 [endless]: http://github.com/commonsguy/cwac-endless/tree/master
