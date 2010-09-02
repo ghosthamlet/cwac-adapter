@@ -19,8 +19,9 @@ By itself, it is not terribly interesting. However, other CWAC
 projects, like [`EndlessAdapter`][endless] and
 [`ThumbnailAdapter`][thumbnail], take advantage of it.
 
-This is available from [the Android Parcel Project](http://andparcel.com) as the
-`cwac-adapter` parcel.
+This is packaged as an Android library project, though a simple
+JAR is also available from the Downloads section of this
+GitHub repository.
 
 Usage
 -----
@@ -35,13 +36,12 @@ None at present.
 
 Version
 -------
-This is version 0.3 of this module, meaning it is slowly climbing
+This is version v0.4.0 of this module, meaning it is slowly climbing
 towards respectability.
 
 Demo
 ----
-There is no demo project, other than a stub activity that does
-not use the referenced module. Please refer to
+There is no demo project. Please refer to
 [`EndlessAdapter`][endless] and [`ThumbnailAdapter`][thumbnail]
 for examples of using this class.
 
@@ -56,6 +56,10 @@ Questions
 If you have questions regarding the use of this code, please
 join and ask them on the [cw-android Google Group][gg]. Be sure to
 indicate which CWAC module you have questions about.
+
+Release Notes
+-------------
+v0.4.0: converted to Android library project
 
 Who Made This?
 --------------
